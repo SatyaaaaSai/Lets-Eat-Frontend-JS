@@ -1,4 +1,5 @@
 import CustomerTestimonials from "../components/CustomerTestimonals";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MainPage from "../components/MainPage";
 import MenuSection from "../components/MenuSection";
@@ -11,6 +12,7 @@ const LandingPage = () => {
       <RestaurantCard />
       <MenuSection />
       <CustomerTestimonials />
+      <Footer/>
     </div>
   );
 };
