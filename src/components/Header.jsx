@@ -306,7 +306,6 @@
 // };
 
 // export default Header;
-
 import { Link } from "react-router-dom";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { useState } from "react";
@@ -329,17 +328,9 @@ const Header = () => {
 
   return (
     <header className="top-0 z-50 bg-background shadow-sm">
-<<<<<<< HEAD
-      <div className="container flex items-center justify-between py-4 px-4 mx-9 md:px-6">
-        <Link to="/" className="text-2xl font-bold px-4">
-          Let's Eat
-        </Link>
-        <nav className="hidden md:flex items-center gap-4">
-          <Link
-=======
       <div className="container flex items-center justify-between py-4 px-4 md:px-6">
         <Link to="/" className="text-2xl font-bold">
-          Delicious Bites
+          Let's Eat
         </Link>
         <nav className="hidden md:flex items-center gap-4">
           <Link
@@ -349,7 +340,6 @@ const Header = () => {
             Home
           </Link>
           <Link
->>>>>>> 24e4e7dbd09a04ca24cc9aa49b4061b3fe198df7
             to="/menu"
             className="text-lg font-medium hover:underline underline-offset-4"
           >
@@ -361,7 +351,6 @@ const Header = () => {
           >
             Contact
           </Link>
-<<<<<<< HEAD
           <Link
             to="/help"
             className="text-lg font-medium hover:underline underline-offset-4"
@@ -369,13 +358,11 @@ const Header = () => {
             Help
           </Link>
           <Link
-            to="/Cart"
+            to="/cart"
             className="text-lg font-medium hover:underline underline-offset-4"
           >
             Cart
           </Link>
-=======
->>>>>>> 24e4e7dbd09a04ca24cc9aa49b4061b3fe198df7
         </nav>
         <div className="flex items-center gap-4">
           <div className="relative">
@@ -400,10 +387,10 @@ const Header = () => {
           {showMenu && (
             <div className="absolute top-16 right-4 w-28 bg-white rounded-md shadow-lg z-20">
               <div className="py-2">
-                <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white-500 hover:rounded-md">
+                <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white rounded-md">
                   Sign In
                 </button>
-                <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white-500 hover:rounded-md">
+                <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white rounded-md">
                   Sign Up
                 </button>
               </div>
