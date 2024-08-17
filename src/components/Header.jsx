@@ -319,10 +319,12 @@ const Header = () => {
 
   const toggleAccountSettings = () => {
     setShow(!show);
+    setShowMenu(false);
   };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    setShow(false);
   };
 
   return (
@@ -372,7 +374,7 @@ const Header = () => {
             <FaBars />
           </button>
           {showMenu && (
-            <div className="absolute top-16 right-4 w-48 bg-white rounded-md shadow-lg z-20">
+            <div className="absolute top-16 right-4 w-28 bg-white rounded-md shadow-lg z-20">
               <div className="py-2">
                 <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white-500 hover:rounded-md">
                   Sign In
