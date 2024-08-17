@@ -87,7 +87,8 @@ function RestaurantCard({ imageSrc, title, description, rating }) {
           })}
           <span className="text-gray-600">{rating.toFixed(1)}</span>
         </div>
-        <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded w-full hover:bg-blue-500 hover:text-slate-100" onClick={<Kitchen/>}>
+
+        <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded w-full hover:bg-blue-500 hover:text-slate-100">
           View Details
         </button>
       </div>

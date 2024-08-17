@@ -329,12 +329,27 @@ const Header = () => {
 
   return (
     <header className="top-0 z-50 bg-background shadow-sm">
+<<<<<<< HEAD
       <div className="container flex items-center justify-between py-4 px-4 mx-9 md:px-6">
         <Link to="/" className="text-2xl font-bold px-4">
           Let's Eat
         </Link>
         <nav className="hidden md:flex items-center gap-4">
           <Link
+=======
+      <div className="container flex items-center justify-between py-4 px-4 md:px-6">
+        <Link to="/" className="text-2xl font-bold">
+          Delicious Bites
+        </Link>
+        <nav className="hidden md:flex items-center gap-4">
+          <Link
+            to="/"
+            className="text-lg font-medium hover:underline underline-offset-4"
+          >
+            Home
+          </Link>
+          <Link
+>>>>>>> 24e4e7dbd09a04ca24cc9aa49b4061b3fe198df7
             to="/menu"
             className="text-lg font-medium hover:underline underline-offset-4"
           >
@@ -346,6 +361,7 @@ const Header = () => {
           >
             Contact
           </Link>
+<<<<<<< HEAD
           <Link
             to="/help"
             className="text-lg font-medium hover:underline underline-offset-4"
@@ -358,6 +374,8 @@ const Header = () => {
           >
             Cart
           </Link>
+=======
+>>>>>>> 24e4e7dbd09a04ca24cc9aa49b4061b3fe198df7
         </nav>
         <div className="flex items-center gap-4">
           <div className="relative">
