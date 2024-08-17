@@ -2,6 +2,7 @@
 // import { CiStar } from "react-icons/ci"; // Replace with appropriate icon library if needed
 import { RES_URL } from "../assets/assests";
 import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
+import Footer from "./Footer";
 function App() {
   const restaurants = [
     {
