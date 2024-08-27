@@ -3,6 +3,7 @@
 import { RES_URL } from "../assets/assests";
 import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
 import Kitchen from "./Kitchen";
+import "./Common.css";
 function App() {
   const restaurants = [
     {
@@ -32,7 +33,7 @@ function App() {
   ];
 
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-12 md:py-20 " id="animi">
       <div className="container mx-auto">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold">Our Restaurants</h2>

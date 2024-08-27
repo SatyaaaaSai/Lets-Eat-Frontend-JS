@@ -311,7 +311,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa"; // Import the hamburger icon
 import AccountSettings from "./AccountSettings";
-
+// import "./Common.css";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showMenu, setShowMenu] = useState(false); // State for mobile menu
@@ -325,44 +325,23 @@ const Header = () => {
     setShowMenu(!showMenu);
     setShow(false);
   };
-
   return (
-    <header className="top-0 z-50 bg-background shadow-sm">
-      <div className="container flex items-center justify-between py-4 px-4 md:px-6">
+    <header className="top-0 z-50 bg-background shadow-sm sticky">
+      <div className="container flex items-center justify-between py-4 px-4 mx-auto md:px-6">
         <Link to="/" className="text-2xl font-bold">
           Let's Eat
         </Link>
         <nav className="hidden md:flex items-center gap-4">
-          <Link
+          {/* <Link
             to="/"
             className="text-lg font-medium hover:underline underline-offset-4"
           >
             Home
-          </Link>
-          <Link
-            to="/menu"
-            className="text-lg font-medium hover:underline underline-offset-4"
-          >
-            Menu
-          </Link>
-          <Link
-            to="/contact"
-            className="text-lg font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/help"
-            className="text-lg font-medium hover:underline underline-offset-4"
-          >
-            Help
-          </Link>
-          <Link
-            to="/cart"
-            className="text-lg font-medium hover:underline underline-offset-4"
-          >
-            Cart
-          </Link>
+          </Link> */}
+          <a href="#menusection" className="text-lg font-medium hover:underline underline-offset-4">Menu</a>
+          <a href="#" className="text-lg font-medium hover:underline underline-offset-4">Help</a>
+          <a href="#footer" className="text-lg font-medium hover:underline underline-offset-4">Contact</a>
+          <a href="#" className="text-lg font-medium hover:underline underline-offset-4">Cart</a>
         </nav>
         <div className="flex items-center gap-4">
           <div className="relative">

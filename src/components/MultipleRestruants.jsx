@@ -1,6 +1,6 @@
 import { useState } from "react";
 import IndividualRestroCard from "./IndividualRestroCard";
-
+import "./Common.css";
 const restaurants = [
   {
     id: 1,
@@ -63,7 +63,7 @@ const MultipleRestaurants = () => {
   return (
     <div>
       {/* Restaurant Selector */}
-      <div className="restaurant-selector flex gap-4">
+      <div className="restaurant-selector flex gap-4" id="animi">
         {restaurants.map((restaurant) => (
           <button
             key={restaurant.id}

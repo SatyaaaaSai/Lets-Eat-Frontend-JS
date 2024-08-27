@@ -2,11 +2,11 @@
 import { FaPhoneAlt as PhoneIcon, FaEnvelope as MailIcon, FaMapMarkerAlt as LocateIcon } from "react-icons/fa";
 import { FaFacebookF as FacebookIcon, FaTwitter as TwitterIcon, FaInstagram as InstagramIcon } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+// import "../css/common.css";
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 py-8 md:py-12">
-      <div className="container px-4 md:px-6">
+    <footer className="bg-gray-100 py-8 md:py-12 ">
+      <div className="container px-4 md:px-6" id="footer">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
             <h3 className="text-lg font-bold">About Us</h3>

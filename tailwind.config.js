@@ -10,7 +10,16 @@ export default {
         "primary": "#3b82f6",
         "secondary": "#f97316",
       },
+      keyframes: {
+        appear: {
+          '0%': { opacity: '0.5', transform: 'scale(0.5)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        appear: 'appear 2s linear',
+      },
     },
   },
-  plugins: [],
+    plugins: [],
 };
