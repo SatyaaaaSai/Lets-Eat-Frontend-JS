@@ -9,13 +9,13 @@ import Kitchen from "../components/Kitchen";
 const LandingPage = () => {
   return (
     <div>
-      {/* <Header/>
+      <Header/>
       <MainPage />
       <RestaurantCard />
       <MenuSection />
       <CustomerTestimonials />
-      <Footer/> */}
-      <Kitchen/>
+      <Footer/>
+      {/*<Kitchen/>*/}
     </div>
   );
 };
