@@ -8,14 +8,14 @@ import RestaurantCard from "../components/ResturantCard";
 import Kitchen from "../components/Kitchen";
 const LandingPage = () => {
   return (
-    <div>
-      <Header/>
+    <div className="!scroll-smooth">
+      {/* <Header/>
       <MainPage />
       <RestaurantCard />
       <MenuSection />
       <CustomerTestimonials />
-      <Footer/>
-      {/*<Kitchen/>*/}
+      <Footer/> */}
+      <Kitchen/>
     </div>
   );
 };

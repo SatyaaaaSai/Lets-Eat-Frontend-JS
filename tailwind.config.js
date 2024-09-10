@@ -19,6 +19,9 @@ export default {
       animation: {
         appear: 'appear 2s linear',
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
     },
   },
     plugins: [],
