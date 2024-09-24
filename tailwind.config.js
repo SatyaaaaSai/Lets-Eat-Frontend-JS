@@ -20,7 +20,7 @@ export default {
         appear: 'appear 2s linear',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        Poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
