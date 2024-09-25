@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import "./Common.css";
 const MainPage = () => {
   return (
     <div>
       <main className="flex-1" id="menusection animi">
+=======
+const MainPage = () => {
+  return (
+    <div>
+      <main className="flex-1">
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
         <section className="bg-gray-100 py-12 md:py-20">
           <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="space-y-6 m-10">
@@ -24,12 +31,21 @@ const MainPage = () => {
               </div>
             </div>
             <div>
+<<<<<<< HEAD
               <img 
                 src="https://res.cloudinary.com/dwjafitz1/image/upload/v1724126443/wy0atmupe5nd6ebnccba.jpg"
                 width={700}
                 height={400}
                 alt="Restaurant"
                 className="rounded-lg object-cover px-4"
+=======
+              <img
+                src="https://images01.nicepagecdn.com/page/67/56/homepage-design-preview-67567.jpg"
+                width={700}
+                height={400}
+                alt="Restaurant"
+                className="rounded-lg object-cover"
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
                 style={{ aspectRatio: "600/400", objectFit: "cover" }}
               />
             </div>

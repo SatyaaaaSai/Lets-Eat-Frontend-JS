@@ -1,10 +1,18 @@
 /* eslint-disable react/prop-types */
 import { FaUserCircle } from 'react-icons/fa';
+<<<<<<< HEAD
 import "./Common.css";
 const CustomerTestimonials = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white" id="animi">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10 mx-auto">
+=======
+
+const CustomerTestimonials = () => {
+  return (
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+      <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
         <div className="space-y-3">
           <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             What Our Customers Say

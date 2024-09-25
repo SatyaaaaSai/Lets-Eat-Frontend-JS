@@ -10,6 +10,7 @@ export default {
         "primary": "#3b82f6",
         "secondary": "#f97316",
       },
+<<<<<<< HEAD
       keyframes: {
         appear: {
           '0%': { opacity: '0.5', transform: 'scale(0.5)' },
@@ -25,4 +26,9 @@ export default {
     },
   },
     plugins: [],
+=======
+    },
+  },
+  plugins: [],
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
 };

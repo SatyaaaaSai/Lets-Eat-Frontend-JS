@@ -2,8 +2,12 @@
 // import { CiStar } from "react-icons/ci"; // Replace with appropriate icon library if needed
 import { RES_URL } from "../assets/assests";
 import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
+<<<<<<< HEAD
 import Kitchen from "./Kitchen";
 import "./Common.css";
+=======
+import Footer from "./Footer";
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
 function App() {
   const restaurants = [
     {
@@ -33,7 +37,11 @@ function App() {
   ];
 
   return (
+<<<<<<< HEAD
     <section className="py-12 md:py-20 " id="animi">
+=======
+    <section className="py-12 md:py-20">
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
       <div className="container mx-auto">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold">Our Restaurants</h2>
@@ -88,7 +96,10 @@ function RestaurantCard({ imageSrc, title, description, rating }) {
           })}
           <span className="text-gray-600">{rating.toFixed(1)}</span>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
         <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded w-full hover:bg-blue-500 hover:text-slate-100">
           View Details
         </button>
@@ -98,6 +109,7 @@ function RestaurantCard({ imageSrc, title, description, rating }) {
 }
 
 export default App;
+<<<<<<< HEAD
 
 // import { RES_URL } from "../assets/assests";
 // import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
@@ -205,3 +217,5 @@ export default App;
 
 // export default App;
 
+=======
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05

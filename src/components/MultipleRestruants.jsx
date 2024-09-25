@@ -1,6 +1,10 @@
 import { useState } from "react";
 import IndividualRestroCard from "./IndividualRestroCard";
+<<<<<<< HEAD
 import "./Common.css";
+=======
+
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
 const restaurants = [
   {
     id: 1,
@@ -63,7 +67,11 @@ const MultipleRestaurants = () => {
   return (
     <div>
       {/* Restaurant Selector */}
+<<<<<<< HEAD
       <div className="restaurant-selector flex gap-4" id="animi">
+=======
+      <div className="restaurant-selector flex gap-4">
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
         {restaurants.map((restaurant) => (
           <button
             key={restaurant.id}

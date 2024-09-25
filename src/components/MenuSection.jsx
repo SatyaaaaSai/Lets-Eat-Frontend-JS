@@ -1,11 +1,19 @@
 /* eslint-disable react/prop-types */
 import  { useState } from "react";
+<<<<<<< HEAD
 import "./Common.css";
+=======
+
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
 const MenuSection = () => {
   const [activeTab, setActiveTab] = useState("vegetarian");
 
   return (
+<<<<<<< HEAD
     <section className="bg-gray-100 py-12 md:py-20 sm:py-auto" id="animi" >
+=======
+    <section className="bg-gray-100 py-12 md:py-20">
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
       <div className="container mx-auto">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold">Our Menu</h2>

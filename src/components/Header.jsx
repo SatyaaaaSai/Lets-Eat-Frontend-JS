@@ -306,12 +306,20 @@
 // };
 
 // export default Header;
+<<<<<<< HEAD
+=======
+
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
 import { Link } from "react-router-dom";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa"; // Import the hamburger icon
 import AccountSettings from "./AccountSettings";
+<<<<<<< HEAD
 // import "./Common.css";
+=======
+
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showMenu, setShowMenu] = useState(false); // State for mobile menu
@@ -325,6 +333,7 @@ const Header = () => {
     setShowMenu(!showMenu);
     setShow(false);
   };
+<<<<<<< HEAD
   return (
     <header className="top-0 z-50 bg-background shadow-sm sticky">
       <div className="container flex items-center justify-between py-4 px-4 mx-auto md:px-6">
@@ -333,15 +342,42 @@ const Header = () => {
         </Link>
         <nav className="hidden md:flex items-center gap-4">
           {/* <Link
+=======
+
+  return (
+    <header className="top-0 z-50 bg-background shadow-sm">
+      <div className="container flex items-center justify-between py-4 px-4 md:px-6">
+        <Link to="/" className="text-2xl font-bold">
+          Delicious Bites
+        </Link>
+        <nav className="hidden md:flex items-center gap-4">
+          <Link
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
             to="/"
             className="text-lg font-medium hover:underline underline-offset-4"
           >
             Home
+<<<<<<< HEAD
           </Link> */}
           <a href="#menusection" className="text-lg font-medium hover:underline underline-offset-4">Menu</a>
           <a href="#" className="text-lg font-medium hover:underline underline-offset-4">Help</a>
           <a href="#footer" className="text-lg font-medium hover:underline underline-offset-4">Contact</a>
           <a href="#" className="text-lg font-medium hover:underline underline-offset-4">Cart</a>
+=======
+          </Link>
+          <Link
+            to="/menu"
+            className="text-lg font-medium hover:underline underline-offset-4"
+          >
+            Menu
+          </Link>
+          <Link
+            to="/contact"
+            className="text-lg font-medium hover:underline underline-offset-4"
+          >
+            Contact
+          </Link>
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
         </nav>
         <div className="flex items-center gap-4">
           <div className="relative">
@@ -366,10 +402,17 @@ const Header = () => {
           {showMenu && (
             <div className="absolute top-16 right-4 w-28 bg-white rounded-md shadow-lg z-20">
               <div className="py-2">
+<<<<<<< HEAD
                 <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white rounded-md">
                   Sign In
                 </button>
                 <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white rounded-md">
+=======
+                <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white-500 hover:rounded-md">
+                  Sign In
+                </button>
+                <button className="block px-4 py-2 text-sm w-full hover:bg-blue-500 hover:text-white-500 hover:rounded-md">
+>>>>>>> c61fe6fffe86074401758e4c355376fbde96ca05
                   Sign Up
                 </button>
               </div>
