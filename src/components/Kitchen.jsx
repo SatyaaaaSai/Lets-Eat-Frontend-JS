@@ -3,76 +3,118 @@ import { IoMdCart } from "react-icons/io";
 import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
 import { MEALS_URL, SNACK_URL ,CURRY_URL,RES_URL} from "../assets/assests";
 import { useState } from "react";
+import { data } from "autoprefixer";
 const Kitchen = () => {
   const rating = 3.7;
   const area = "Bhimavaram";
-  const[currys, setCurrys] = useState(false);
-  const[meals, setMeals] = useState(false);
-  const[snacks, setSnacks] = useState(false);
+  // const[currys, setCurrys] = useState(true);
+  // const[meals, setMeals] = useState(true);
+  // const[snacks, setSnacks] = useState(true);
   // Home Food menu 
   const foodItems = [
     {
         name: 'Spaghetti Bolognese',
         imgUrl: RES_URL,
         cost: 12.99,
-        meals:false,
+        check:true,
+        itemstype:"snacks",
     },
     {
         name: 'Chicken Curry',
         imgUrl: RES_URL,
         cost: 10.99,
-        meals:false,
+        check:true,
+        itemstype:"currys",
     },
     {
         name: 'Vegetable Stir Fry',
         imgUrl: RES_URL,
         cost: 8.99,
-        meals:false,
+        check:true,
+        itemstype:"currys",
     },
     {
         name: 'Beef Tacos',
         imgUrl: RES_URL,
         cost: 9.99,
-        snacks:false,
+        check:true,
+        itemstype:"meals",
     },
     {
         name: 'Margherita Pizza',
         imgUrl: RES_URL,
         cost: 11.49,
-        snacks:false,
+        check:true,
+        itemstype:"snacks",
     },
     {
         name: 'Caesar Salad',
         imgUrl: RES_URL,
         cost: 7.99,
-        snacks:false,
+        check:true,
+        itemstype:"meals",
     },
     {
         name: 'Shrimp Fried Rice',
         imgUrl: RES_URL,
         cost: 10.49,
-        currys:false,
+        check:true,
+        itemstype:"meals",
     },
     {
         name: 'Lentil Soup',
         imgUrl: RES_URL,
         cost: 6.99,
-        currys:false,
+        check:true,
+        itemstype:"meals",
     },
     {
         name: 'Grilled Cheese Sandwich',
         imgUrl: RES_URL,
         cost: 5.99,
-        currys:false,
+        check:true,
+        itemstype:"snacks",
     },
     {
         name: 'Chocolate Cake',
         imgUrl: RES_URL,
         cost: 4.99,
-        currys:false,
+        check:true,
+        itemstype:"snacks",
     },
   ];
 
+  const[filter,setFilter] = useState("all");
+
+  // const filterItems = (filterType) => {
+  //   filter = filterType;
+  //   renderItems(); 
+  // };
+
+  const renderItems = () => {
+    const filteredItems = filter === "all" 
+      ? foodItems 
+      : foodItems.filter(item => item.itemstype === filter);
+
+    return filteredItems.map((item, index) => (
+      <div className="w-[48rem] m-auto" key={index}>
+        <div className="flex justify-between items-center">
+          <div className="flex flex-row items-center gap-10">
+            <img src={item.imgUrl} alt={item.name} className="w-28 h-w-28" />
+            <h6 className="text-2xl mr-[100px]">{item.name}</h6>
+          </div>
+          <div className="float-right">
+            <p className="text-2xl">${item.cost}</p>
+            <button className="bg-gray-500 p-2 float-right focus:bg-white">
+              <IoMdCart className="w-8 h-8" />
+            </button>
+          </div>
+        </div>
+        <br />
+      </div>
+    ));
+  };
+  
   return (
     <main>
       <Header />
@@ -145,39 +187,45 @@ const Kitchen = () => {
       </section>
       {/* -----Items Avaliable---- */}
       <section className="flex justify-center">
-            <div className="w-[53rem] ">
-                <div>
-                    <div className="flex items-center justify-evenly text-black p-4 text-2xl">
-                        <div className="cursor-pointer hover:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2">All Items</div>
-                        <div className="cursor-pointer hover:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2">Meals</div>
-                        <div className="cursor-pointer hover:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2">Currys</div>
-                        <div className="cursor-pointer hover:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2">Snacks</div>
-                    </div>
-                    <div className="w-[53rem] h-2 border-dashed border-t-2 border-gray-500">
-                    </div>
-                </div>
-                <div>
-                  {foodItems.map((item,index)=>(
-                    <div className="w-[48rem] m-auto">
-                      <div key={index} className="flex justify-between items-center">
-                        <div>
-                        <img src={item.imgUrl} alt={item.name} className="w-28 h-w-28" />
-                        </div>
-                        <div>
-                          <h6 className="text-2xl mr-[100px]">{item.name}</h6>
-                        </div>
-                        <div>
-                            <p className="text-2xl">${item.cost}</p>
-                            <button className="bg-gray-500 p-2 focus:bg-white"><IoMdCart className="w-8 h-8"/></button>
-                          </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-            </div>
-        </section>
+      <div className="w-[53rem]">
+        <div>
+          <div className="flex items-center justify-evenly text-black p-4 text-2xl">
+            <button
+              className="cursor-pointer hover:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2"
+              onClick={() => setFilter("all")}
+            >
+              All Items
+            </button>
+            <button
+              onClick={() => setFilter("meals")}
+              className="cursor-pointer focus:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2"
+            >
+              Meals
+            </button>
+            <button
+              onClick={() => setFilter("currys")}
+              className="cursor-pointer focus:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2"
+            >
+              Currys
+            </button>
+            <button
+              onClick={() => setFilter("snacks")}
+              className="cursor-pointer focus:bg-blue-500 rounded-2xl transition-all ease-in-out text-black px-4 py-2"
+            >
+              Snacks
+            </button>
+          </div>
+          <div className="w-[53rem] h-2 border-dashed border-t-2 border-gray-500"></div>
+        </div>
+        {/* Dynamically generate the Menu */}
+        <div>
+          {renderItems()}
+        </div>
+      </div>
+    </section>
 
     </main>
   );
 };
 export default Kitchen;
+

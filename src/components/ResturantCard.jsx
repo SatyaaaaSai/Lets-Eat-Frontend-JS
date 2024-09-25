@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-// import { CiStar } from "react-icons/ci"; // Replace with appropriate icon library if needed
 import { RES_URL } from "../assets/assests";
 import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
-import Kitchen from "./Kitchen";
+import { Link } from "react-router-dom"; 
 import "./Common.css";
+
 function App() {
   const restaurants = [
     {
@@ -38,8 +38,7 @@ function App() {
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold">Our Restaurants</h2>
           <p className="text-gray-600">
-            Discover our diverse collection of restaurants, each offering a
-            unique dining experience.
+            Discover our diverse collection of restaurants, each offering a unique dining experience.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -54,6 +53,7 @@ function App() {
           ))}
         </div>
       </div>
+      <Outlet />
     </section>
   );
 }
@@ -77,27 +77,25 @@ function RestaurantCard({ imageSrc, title, description, rating }) {
             if (index < filledStars) {
               return <MdStar key={index} className="h-5 w-5 text-yellow-500" />;
             } else if (index === filledStars && isHalfStar) {
-              return (
-                <MdStarHalf key={index} className="h-5 w-5 text-yellow-500" />
-              );
+              return <MdStarHalf key={index} className="h-5 w-5 text-yellow-500" />;
             } else {
-              return (
-                <MdStarOutline key={index} className="h-5 w-5 text-gray-300" />
-              );
+              return <MdStarOutline key={index} className="h-5 w-5 text-gray-300" />;
             }
           })}
           <span className="text-gray-600">{rating.toFixed(1)}</span>
         </div>
-
-        <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded w-full hover:bg-blue-500 hover:text-slate-100">
-          View Details
-        </button>
+        <Link to='kitchens'>
+          <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded w-full hover:bg-blue-500 hover:text-slate-100">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );
 }
 
 export default App;
+
 
 // import { RES_URL } from "../assets/assests";
 // import { MdStar, MdStarHalf, MdStarOutline } from "react-icons/md";
