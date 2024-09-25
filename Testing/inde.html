@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            width:100%;
+            height:770px;
+            background-color: aqua;
+        }.two{
+            width:100%;
+            height:770px;
+            background-color: black;
+        }
+        .three{
+            width:100%;
+            height:770px;
+            background-color: pink;
+        }
+        .four{
+            width:100%;
+            height:770px;
+            background-color: yellow;
+        }
+        .five{
+            width:100%;
+            height:770px;
+            background-color: orange;
+        }
+        .six{
+            width:100%;
+            height:770px;
+            background-color: lightcoral;
+        }
+        .seven{
+            width:100%;
+            height:770px;
+            background-color: red;
+        }
+        .block{
+            animation: appear linear ;
+            animation-timeline: view();
+        }
+        @keyframes appear {
+            from{
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="block one"></div>
+        <div class="block two"></div>
+        <div class="block three"></div>
+        <div class="block four"></div>
+        <div class="block five"></div>
+        <div class="block six"></div>
+        <div class="block sevens"></div>
+    </div>
+</body>
+</html>

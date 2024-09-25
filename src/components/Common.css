@@ -1,0 +1,21 @@
+@keyframes appear {
+    from{
+        opacity: 0.8;
+        transform:scale(0.7);
+    }
+    to{
+        opacity: 1;
+        transform:scale(1.3);
+    }
+}
+#animi{
+    animation: appear linear;
+    transition: 1s;
+    animation-timeline: view(); 
+} 
+ 
+@media (max-width: 460px) {
+    #animi {
+        animation: none;
+    }
+}
